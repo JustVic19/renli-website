@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privacy Policy — Renli</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --blue:#3B82F6;--blue-dark:#1D4ED8;--blue-darker:#1E3A5F;
+  --blue-light:#DBEAFE;--blue-bg:#F0F7FF;
+  --text:#1E3A5F;--muted:#6B7280;--border:#BFDBFE;--white:#ffffff;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--blue-bg);color:var(--text);line-height:1.7}
+h1,h2,h3,h4{font-family:'Sora',sans-serif}
+
+nav{
+  position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:100;
+  background:rgba(255,255,255,0.92);backdrop-filter:blur(20px);
+  border:1.5px solid var(--border);border-radius:100px;
+  padding:10px 20px;display:flex;align-items:center;gap:24px;
+  box-shadow:0 4px 24px rgba(59,130,246,0.13);white-space:nowrap;
+}
+.nav-logo{display:flex;align-items:center;gap:8px}
+.nav-name{font-family:'Sora',sans-serif;font-weight:700;font-size:17px;color:var(--text)}
+.nav-back{color:var(--muted);font-size:14px;text-decoration:none;transition:color .2s}
+.nav-back:hover{color:var(--blue)}
+
+.hero{
+  padding:140px 40px 60px;text-align:center;
+  background:linear-gradient(180deg,var(--blue-bg) 0%,var(--white) 100%);
+}
+.hero-label{
+  display:inline-block;background:var(--blue-light);color:var(--blue-dark);
+  font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  padding:5px 14px;border-radius:100px;margin-bottom:20px;
+}
+.hero h1{font-size:clamp(32px,5vw,56px);font-weight:800;letter-spacing:-.03em;margin-bottom:16px}
+.hero p{font-size:17px;color:var(--muted);max-width:520px;margin:0 auto 12px}
+.hero-date{font-size:14px;color:var(--muted)}
+
+.container{max-width:760px;margin:0 auto;padding:0 40px 100px}
+
+.summary-cards{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:16px;
+  margin-bottom:48px;
+}
+.summary-card{
+  background:var(--white);border:1.5px solid var(--border);border-radius:16px;
+  padding:20px;text-align:center;
+}
+.summary-card .icon{font-size:28px;margin-bottom:10px}
+.summary-card h4{font-size:13px;font-weight:700;margin-bottom:6px;color:var(--text)}
+.summary-card p{font-size:12px;color:var(--muted);line-height:1.5}
+
+.toc{
+  background:var(--white);border:1.5px solid var(--border);border-radius:20px;
+  padding:28px 32px;margin-bottom:48px;
+}
+.toc h3{font-size:15px;font-weight:700;margin-bottom:16px;color:var(--text)}
+.toc ol{padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.toc li a{color:var(--blue);font-size:14px;text-decoration:none;transition:color .2s}
+.toc li a:hover{color:var(--blue-dark)}
+
+.section{margin-bottom:48px}
+.section h2{
+  font-size:22px;font-weight:700;margin-bottom:20px;padding-bottom:12px;
+  border-bottom:2px solid var(--blue-light);color:var(--text);
+}
+.section h3{font-size:17px;font-weight:600;margin:24px 0 10px;color:var(--text)}
+.section p{font-size:15px;color:#374151;margin-bottom:14px;line-height:1.75}
+.section ul,.section ol{padding-left:24px;margin-bottom:14px;display:flex;flex-direction:column;gap:8px}
+.section li{font-size:15px;color:#374151;line-height:1.6}
+
+.data-table{
+  width:100%;border-collapse:collapse;margin:20px 0;border-radius:12px;overflow:hidden;
+  border:1.5px solid var(--border);
+}
+.data-table th{
+  background:var(--blue-light);color:var(--blue-darker);font-family:'Sora',sans-serif;
+  font-size:13px;font-weight:600;text-align:left;padding:12px 16px;
+}
+.data-table td{
+  padding:12px 16px;font-size:14px;color:#374151;
+  border-top:1px solid var(--border);vertical-align:top;
+}
+.data-table tr:nth-child(even) td{background:#F8FBFF}
+
+.highlight-box{
+  background:var(--blue-light);border-left:4px solid var(--blue);
+  border-radius:0 12px 12px 0;padding:16px 20px;margin:20px 0;
+}
+.highlight-box p{margin:0;font-size:14px;color:var(--blue-darker);font-weight:500}
+
+.green-box{
+  background:#D1FAE5;border-left:4px solid #10B981;
+  border-radius:0 12px 12px 0;padding:16px 20px;margin:20px 0;
+}
+.green-box p{margin:0;font-size:14px;color:#065F46;font-weight:500}
+
+.rights-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0;
+}
+.right-card{
+  background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:16px;
+}
+.right-card h4{font-size:14px;font-weight:700;margin-bottom:6px;color:var(--text)}
+.right-card p{font-size:13px;color:var(--muted);margin:0;line-height:1.5}
+
+.contact-card{
+  background:var(--blue);border-radius:20px;padding:32px;
+  text-align:center;margin-top:48px;
+}
+.contact-card h3{color:white;font-size:20px;margin-bottom:8px}
+.contact-card p{color:rgba(255,255,255,.8);font-size:15px;margin-bottom:16px}
+.contact-card a{
+  display:inline-block;background:white;color:var(--blue);
+  font-family:'Sora',sans-serif;font-weight:700;font-size:14px;
+  padding:12px 24px;border-radius:100px;text-decoration:none;
+  transition:opacity .2s;
+}
+.contact-card a:hover{opacity:.9}
+
+footer{
+  text-align:center;padding:40px;border-top:1px solid var(--border);
+  font-size:13px;color:var(--muted);
+}
+footer a{color:var(--blue);text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+@media(max-width:700px){
+  .summary-cards{grid-template-columns:1fr}
+  .rights-grid{grid-template-columns:1fr}
+  .hero{padding:120px 20px 40px}
+  .container{padding:0 20px 80px}
+  nav{gap:12px;padding:8px 14px}
+  .data-table{font-size:13px}
+  .data-table th,.data-table td{padding:10px 12px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <svg width="26" height="30" viewBox="0 0 200 220" fill="none">
+      <rect x="93" y="8" width="14" height="34" rx="7" fill="#1D4ED8"/>
+      <circle cx="100" cy="6" r="14" fill="white" opacity=".95"/>
+      <circle cx="100" cy="6" r="9" fill="#DBEAFE"/>
+      <rect x="28" y="40" width="144" height="138" rx="34" fill="#DBEAFE"/>
+      <rect x="36" y="50" width="128" height="118" rx="26" fill="#1E3A5F"/>
+      <rect x="48" y="80" width="40" height="46" rx="18" fill="#3B82F6"/>
+      <rect x="112" y="80" width="40" height="46" rx="18" fill="#3B82F6"/>
+      <circle cx="66" cy="86" r="5" fill="white" opacity=".95"/>
+      <circle cx="130" cy="86" r="5" fill="white" opacity=".95"/>
+      <path d="M62 140 Q100 160 138 140" stroke="#3B82F6" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+    </svg>
+    <span class="nav-name">Renli</span>
+  </div>
+  <a href="index.html" class="nav-back">← Back to home</a>
+</nav>
+
+<div class="hero">
+  <span class="hero-label">Legal</span>
+  <h1>Privacy Policy</h1>
+  <p>We built Renli to help you, not to harvest your data. Here's exactly what we collect, why, and how we protect it.</p>
+  <p class="hero-date">Last updated: 26 March 2026</p>
+</div>
+
+<div class="container">
+
+  <div class="summary-cards">
+    <div class="summary-card">
+      <div class="icon">🔒</div>
+      <h4>We don't sell your data</h4>
+      <p>Your personal information is never sold to third parties. Ever.</p>
+    </div>
+    <div class="summary-card">
+      <div class="icon">📖</div>
+      <h4>Read-only calendar access</h4>
+      <p>We read your calendar to find deadlines. We never create, edit or delete anything.</p>
+    </div>
+    <div class="summary-card">
+      <div class="icon">🗑️</div>
+      <h4>Delete anytime</h4>
+      <p>You can delete your account and all your data at any time from within the app.</p>
+    </div>
+  </div>
+
+  <div class="toc">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#who-we-are">Who We Are</a></li>
+      <li><a href="#what-we-collect">What Data We Collect</a></li>
+      <li><a href="#how-we-use">How We Use Your Data</a></li>
+      <li><a href="#legal-basis">Legal Basis for Processing</a></li>
+      <li><a href="#sharing">How We Share Your Data</a></li>
+      <li><a href="#retention">How Long We Keep Your Data</a></li>
+      <li><a href="#security">How We Protect Your Data</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#your-rights">Your Rights</a></li>
+      <li><a href="#cookies">Cookies and Tracking</a></li>
+      <li><a href="#third-parties">Third-Party Services</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <div class="section" id="who-we-are">
+    <h2>1. Who We Are</h2>
+    <p>Renli ("we", "us", "our") operates the Renli mobile application and website at renliai.app. We are the data controller responsible for your personal data.</p>
+    <p>For privacy-related questions or requests, contact us at privacy@renliai.app.</p>
+    <div class="highlight-box">
+      <p>This Privacy Policy applies to all users of the Renli app and website, wherever you are located. If you are in the UK or European Economic Area, you have additional rights described in Section 9.</p>
+    </div>
+  </div>
+
+  <div class="section" id="what-we-collect">
+    <h2>2. What Data We Collect</h2>
+    <p>We collect only the data necessary to provide and improve the Service. Here is exactly what we collect and why:</p>
+
+    <h3>Data You Provide Directly</h3>
+    <table class="data-table">
+      <tr><th>Data</th><th>Why we collect it</th></tr>
+      <tr><td><strong>Name</strong></td><td>To personalise your experience within the app — "Good morning, Victor."</td></tr>
+      <tr><td><strong>Email address</strong></td><td>To create and manage your account, and send essential service communications</td></tr>
+      <tr><td><strong>Password</strong></td><td>Stored as a hashed value — we never store your actual password</td></tr>
+      <tr><td><strong>Course and year of study</strong></td><td>To personalise notification tone and detect relevant deadline types</td></tr>
+      <tr><td><strong>Situation type</strong></td><td>University student, professional, etc — to tailor the experience</td></tr>
+      <tr><td><strong>Pain point selections</strong></td><td>Onboarding responses that help us understand how to best help you</td></tr>
+      <tr><td><strong>Work verification photos</strong></td><td>Before and after photos submitted to verify task completion</td></tr>
+    </table>
+
+    <h3>Data We Collect Automatically</h3>
+    <table class="data-table">
+      <tr><th>Data</th><th>Why we collect it</th></tr>
+      <tr><td><strong>Calendar event data</strong></td><td>To detect deadlines. We read event titles, dates and notes only. We never read personal or private event details beyond what is needed for deadline detection. We never create, edit or delete calendar events.</td></tr>
+      <tr><td><strong>Task data</strong></td><td>Tasks you confirm as deadlines, their progress, completion status and due dates</td></tr>
+      <tr><td><strong>Notification interaction data</strong></td><td>Whether you received and acted on notifications — to improve our escalation timing</td></tr>
+      <tr><td><strong>App usage data</strong></td><td>Basic usage patterns within the Renli app to improve the product. We do not track your usage of other apps.</td></tr>
+      <tr><td><strong>Device information</strong></td><td>Device type and iOS version — for technical support and compatibility purposes</td></tr>
+      <tr><td><strong>Streak and completion statistics</strong></td><td>Your productivity progress data shown in the Stats screen</td></tr>
+    </table>
+
+    <h3>Data We Do NOT Collect</h3>
+    <div class="green-box">
+      <p>We do not collect: the content of your calendar events beyond title and date, the content of your emails, your location, your contacts, payment card details (handled entirely by Apple), data about which apps you use beyond what is necessary for the blocking feature, or any biometric data.</p>
+    </div>
+  </div>
+
+  <div class="section" id="how-we-use">
+    <h2>3. How We Use Your Data</h2>
+    <p>We use the data we collect for the following purposes:</p>
+    <ul>
+      <li><strong>Providing the Service:</strong> Creating and managing your account, detecting deadlines from your calendar, sending notifications, and enabling app blocking functionality</li>
+      <li><strong>Personalisation:</strong> Using your name, course, and situation to personalise messages and the in-app experience</li>
+      <li><strong>AI-generated content:</strong> Your task name and deadline timing are sent to OpenAI's API to generate personalised notification messages. We do not send identifying personal information to OpenAI beyond what is necessary for message generation.</li>
+      <li><strong>Work verification:</strong> Photos you submit are analysed by AI to confirm genuine task completion before apps are unlocked</li>
+      <li><strong>Improving the Service:</strong> Aggregated, anonymised usage data helps us understand how to improve Renli</li>
+      <li><strong>Communications:</strong> Sending you important service updates and, with your consent, product news</li>
+      <li><strong>Legal compliance:</strong> Meeting our legal obligations and protecting our legal rights</li>
+    </ul>
+    <p>We will never use your data for advertising purposes or sell it to third parties for any reason.</p>
+  </div>
+
+  <div class="section" id="legal-basis">
+    <h2>4. Legal Basis for Processing</h2>
+    <p>If you are in the UK or EEA, we process your personal data on the following legal bases under UK GDPR and GDPR:</p>
+    <ul>
+      <li><strong>Contract performance:</strong> Processing necessary to provide the Service you have signed up for — account creation, task detection, notification delivery</li>
+      <li><strong>Legitimate interests:</strong> Improving and maintaining the Service, fraud prevention, and security — where these interests are not overridden by your rights</li>
+      <li><strong>Consent:</strong> Calendar access, notification permissions, and any optional data processing — you can withdraw consent at any time through your device settings or account settings</li>
+      <li><strong>Legal obligation:</strong> Where we are required to process data to comply with applicable law</li>
+    </ul>
+  </div>
+
+  <div class="section" id="sharing">
+    <h2>5. How We Share Your Data</h2>
+    <p>We do not sell, rent, or trade your personal data. We share data only in the following limited circumstances:</p>
+
+    <h3>Service Providers</h3>
+    <p>We work with trusted third-party service providers who process data on our behalf under strict data processing agreements:</p>
+    <table class="data-table">
+      <tr><th>Provider</th><th>Purpose</th><th>Data shared</th></tr>
+      <tr><td><strong>Supabase</strong></td><td>Database and file storage</td><td>Account data, task data, completion photos</td></tr>
+      <tr><td><strong>OpenAI</strong></td><td>AI notification message generation and work verification</td><td>Task titles, deadline timing, photo descriptions</td></tr>
+      <tr><td><strong>Apple</strong></td><td>App distribution, payments, push notifications</td><td>App Store data as per Apple's privacy policy</td></tr>
+    </table>
+
+    <h3>Legal Requirements</h3>
+    <p>We may disclose your data if required to do so by law, court order, or governmental authority, or if we believe in good faith that such disclosure is necessary to protect our rights, your safety, or the safety of others.</p>
+
+    <h3>Business Transfers</h3>
+    <p>If Renli is acquired by or merged with another company, your data may be transferred as part of that transaction. We will notify you before your data is transferred and becomes subject to a different privacy policy.</p>
+  </div>
+
+  <div class="section" id="retention">
+    <h2>6. How Long We Keep Your Data</h2>
+    <p>We retain your personal data for as long as your account is active or as needed to provide you with the Service. Specifically:</p>
+    <ul>
+      <li><strong>Account data:</strong> Retained for the lifetime of your account and deleted within 30 days of account deletion</li>
+      <li><strong>Task and completion data:</strong> Retained while your account is active. Deleted within 30 days of account deletion.</li>
+      <li><strong>Work verification photos:</strong> Retained for 90 days after submission to allow for disputes, then permanently deleted</li>
+      <li><strong>Anonymised usage data:</strong> May be retained indefinitely in aggregated, non-identifiable form</li>
+      <li><strong>Legal records:</strong> Some data may be retained longer where required by applicable law</li>
+    </ul>
+    <p>You can request deletion of your data at any time. See Section 9 for your rights.</p>
+  </div>
+
+  <div class="section" id="security">
+    <h2>7. How We Protect Your Data</h2>
+    <p>We take data security seriously and implement appropriate technical and organisational measures including:</p>
+    <ul>
+      <li>All data in transit is encrypted using TLS/SSL</li>
+      <li>All data at rest is encrypted using AES-256 encryption</li>
+      <li>Passwords are hashed using industry-standard algorithms — we never store plaintext passwords</li>
+      <li>Biometric credentials are stored in iOS Keychain with device-only access — they never leave your device</li>
+      <li>Row Level Security on our database ensures users can only access their own data</li>
+      <li>Access to production systems is restricted to authorised personnel only</li>
+      <li>Regular security reviews and updates</li>
+    </ul>
+    <p>While we implement strong security measures, no method of transmission over the internet or electronic storage is 100% secure. If you discover a security vulnerability please disclose it responsibly to security@renliai.app.</p>
+  </div>
+
+  <div class="section" id="children">
+    <h2>8. Children's Privacy</h2>
+    <p>The Service is not directed to children under 13. We do not knowingly collect personal data from children under 13. If you are a parent or guardian and believe your child under 13 has provided us with personal data, please contact us at privacy@renliai.app and we will delete that data promptly.</p>
+    <p>Users between 13 and 18 must have parental or guardian consent to use the Service as described in our Terms of Service.</p>
+  </div>
+
+  <div class="section" id="your-rights">
+    <h2>9. Your Rights</h2>
+    <p>You have the following rights regarding your personal data. To exercise any of these rights, contact us at privacy@renliai.app or use the in-app account settings.</p>
+
+    <div class="rights-grid">
+      <div class="right-card">
+        <h4>Right to Access</h4>
+        <p>Request a copy of the personal data we hold about you.</p>
+      </div>
+      <div class="right-card">
+        <h4>Right to Rectification</h4>
+        <p>Request correction of inaccurate or incomplete personal data.</p>
+      </div>
+      <div class="right-card">
+        <h4>Right to Erasure</h4>
+        <p>Request deletion of your personal data — the "right to be forgotten".</p>
+      </div>
+      <div class="right-card">
+        <h4>Right to Restrict Processing</h4>
+        <p>Request that we limit how we use your data in certain circumstances.</p>
+      </div>
+      <div class="right-card">
+        <h4>Right to Data Portability</h4>
+        <p>Receive your data in a structured, machine-readable format.</p>
+      </div>
+      <div class="right-card">
+        <h4>Right to Object</h4>
+        <p>Object to processing based on legitimate interests or for direct marketing.</p>
+      </div>
+      <div class="right-card">
+        <h4>Right to Withdraw Consent</h4>
+        <p>Withdraw consent at any time where processing is based on consent.</p>
+      </div>
+      <div class="right-card">
+        <h4>Right to Complain</h4>
+        <p>Lodge a complaint with the UK Information Commissioner's Office (ICO) at ico.org.uk.</p>
+      </div>
+    </div>
+
+    <p style="margin-top:20px">We will respond to all rights requests within 30 days. We may need to verify your identity before processing your request.</p>
+
+    <h3>Withdrawing Permissions</h3>
+    <p>You can withdraw calendar access at any time through your iPhone Settings → Privacy → Calendars → Renli. You can withdraw notification permissions through Settings → Notifications → Renli. Withdrawing these permissions will limit the functionality of the Service but will not affect your account.</p>
+  </div>
+
+  <div class="section" id="cookies">
+    <h2>10. Cookies and Tracking</h2>
+    <p>The Renli mobile app does not use cookies. Our website at renliai.app uses minimal essential cookies only:</p>
+    <ul>
+      <li><strong>Session cookies:</strong> To maintain your session on the website — deleted when you close your browser</li>
+      <li><strong>Preference cookies:</strong> To remember any preferences you set on the website</li>
+    </ul>
+    <p>We do not use tracking cookies, advertising cookies, or third-party analytics cookies on our website. We do not use cross-site tracking of any kind.</p>
+  </div>
+
+  <div class="section" id="third-parties">
+    <h2>11. Third-Party Services</h2>
+    <p>When you connect third-party services to Renli, their privacy policies also apply:</p>
+    <ul>
+      <li><strong>Apple Calendar (EventKit):</strong> Governed by Apple's Privacy Policy at apple.com/privacy</li>
+      <li><strong>Apple App Store and payments:</strong> Governed by Apple's Privacy Policy</li>
+      <li><strong>Google Calendar (if connected):</strong> Governed by Google's Privacy Policy at policies.google.com/privacy</li>
+    </ul>
+    <p>We are not responsible for the privacy practices of third-party services. We encourage you to review their privacy policies before connecting them to Renli.</p>
+    <p>Links from our website to third-party websites are not covered by this Privacy Policy. We are not responsible for the content or privacy practices of those websites.</p>
+  </div>
+
+  <div class="section" id="changes">
+    <h2>12. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or for other operational reasons.</p>
+    <p>When we make material changes we will notify you by posting a notice in the app, sending a notification, or updating the "Last updated" date at the top of this page. We encourage you to review this policy periodically.</p>
+    <p>Your continued use of the Service after any changes constitutes your acceptance of the updated policy.</p>
+  </div>
+
+  <div class="section" id="contact">
+    <h2>13. Contact Us</h2>
+    <p>For any privacy-related questions, requests, or concerns please contact us:</p>
+    <ul>
+      <li><strong>Privacy enquiries:</strong> privacy@renliai.app</li>
+      <li><strong>Data deletion requests:</strong> privacy@renliai.app</li>
+      <li><strong>Security disclosures:</strong> security@renliai.app</li>
+      <li><strong>General:</strong> renliai.app</li>
+    </ul>
+    <p>If you are in the UK and are not satisfied with our response to a privacy concern, you have the right to lodge a complaint with the Information Commissioner's Office (ICO) at ico.org.uk or by calling 0303 123 1113.</p>
+  </div>
+
+  <div class="contact-card">
+    <h3>Privacy questions?</h3>
+    <p>We take your privacy seriously and respond to all requests within 30 days.</p>
+    <a href="mailto:privacy@renliai.app">privacy@renliai.app</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Renli. All rights reserved. &nbsp;·&nbsp; <a href="terms.html">Terms of Service</a> &nbsp;·&nbsp; <a href="index.html">Home</a></p>
+</footer>
+
+</body>
+</html>
